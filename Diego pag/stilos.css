@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Color oscuro y semitransparente */
+  }
+  
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2; /* Asegúrate de que la barra de navegación esté por encima del video */
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: font-size 0.3s, color 0.3s; /* Agrega una transición suave a la propiedad font-size y color */
+  }
+  
+  nav a:hover,
+  nav a:active {
+    font-size: 18px; /* Ajusta el tamaño del texto al pasar el cursor o hacer clic/tocar */
+    color: #668d28; /* Cambia el color al pasar el cursor o hacer clic/tocar */
+  }
+
+  .company-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 74px;
+    text-align: center;
+    z-index: 2; /* Asegúrate de que el nombre de la empresa esté por encima del video */
+  }
+
+  .menu-icon {
+    display: none; /* Por defecto, ocultar el ícono de hamburguesa en pantallas más grandes */
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+  
+    nav {
+      float: none;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    /* Mostrar el ícono de hamburguesa en lugar de los enlaces de navegación en pantallas más pequeñas */
+    nav a {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+      color: white;
+    }
+  
+    /* Ocultar la barra de navegación cuando el menú de hamburguesa está abierto */
+    nav.open {
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.253);
+    }
+
+    nav.open a {
+      display: block;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    nav.open a:hover {
+        color: #ffcc00; /* Cambia el color al hacer hover */
+      }
+  }
