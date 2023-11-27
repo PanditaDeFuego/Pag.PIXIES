@@ -101,32 +101,25 @@ body {
     margin-right: 5%;
     text-align: center;
     font-size: 30px;
+  } 
+
+  video {
+    width: 80%;
+    max-width: 800px;
   }
 
   .video-section {
     text-align: center; /* Centra el contenido horizontalmente */
     margin-top: 50px; /* Espaciado superior */
+    
   }
 
   .video-container {
     max-width: auto; /* Ancho máximo del contenedor del video */
     margin: 0px auto; /* Centra el contenedor en la página */
     overflow: hidden; /* Oculta el contenido que se desborda */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra de la tarjeta */
-  }
-  
-  /* Estilos para el iframe del video */
-  .video-container iframe {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 100% !important ; /* Ajusta la altura al 100% del contenedor */
-    align-items: center;
-    border: none; /* Elimina el borde del iframe */
   }
 
-  .video-container h2 {
-    margin-bottom: 20px; /* Espaciado inferior */
-  }
-  
   .instagram-button {
     text-align: center;
     margin-top: 20px;
@@ -252,6 +245,4 @@ body {
         max-width: 100%;
         margin: 0;
     }
-
-    /* Otros estilos para dispositivos móviles pueden ir aquí */
 }
